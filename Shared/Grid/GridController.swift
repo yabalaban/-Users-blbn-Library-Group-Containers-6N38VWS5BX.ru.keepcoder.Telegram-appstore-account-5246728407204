@@ -8,14 +8,24 @@
 import MetalKit
 
 final class GridController: NSObject {
-    private var config: Config
-    private let renderer: Renderer
-    private var scene: GridScene
+    private static var controller: GridController?
     private let hardware: Hardware = Hardware()
-    private var skipTick = false
+    private let modelsStorage: PatternModelsStorage
+    private let renderer: Renderer
+    private var config: Config
+    private var scene: GridScene
+    private var lastTime: Float = 0.0
     
-    init(config: Config, view: MTKView) {
+    static func make(config: Config, view: MTKView, modelsStorage: PatternModelsStorage = PatternModelsStorage.shared) -> GridController {
+        if Self.controller == nil {
+            Self.controller = GridController(config: config, view: view, modelsStorage: modelsStorage)
+        }
+        return Self.controller!
+    }
+    
+    init(config: Config, view: MTKView, modelsStorage: PatternModelsStorage = PatternModelsStorage.shared) {
         self.config = config
+        self.modelsStorage = modelsStorage
         renderer = Renderer(view: view, hardware: hardware)
         scene = GameOfLifeScene(view: view, hardware: hardware)
         super.init()
@@ -42,28 +52,30 @@ final class GridController: NSObject {
         performTick()
     }
     
-    func spawn(at location: (x: Float, y: Float)) {
+    func spawn(pattern: String, at location: (x: Float, y: Float)) {
         guard renderer.isPaused else { return }
-        skipTick = true
-        scene.spawn(pattern: config.pattern, at: location)
+        guard let model = modelsStorage.pattern(for: pattern) else { return }
+        scene.spawn(model: model, at: location)
         performTick()
     }
 }
 
 // MARK: - MTKViewDelegate
 extension GridController: MTKViewDelegate {
-    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
+    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+        
+    }
     
     func draw(in view: MTKView) {
         draw()
     }
     
     private func draw() {
-        if !skipTick {
-            scene.tick()
-        }
-        renderer.draw(scene: &scene)
-        skipTick = false
+        let current = CFAbsoluteTimeGetCurrent()
+        let deltaTime = Float(current) - lastTime
+        lastTime = deltaTime
+        renderer.tick(scene: &scene)
+        renderer.draw(scene: &scene, deltaTime: deltaTime)
     }
 }
 

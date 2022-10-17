@@ -33,19 +33,28 @@ final class Renderer: NSObject {
 
 // MARK: - Rendering
 extension Renderer {
-    func draw(scene: inout GridScene) {
-        guard let commandBuffer = hardware.commandQueue.makeCommandBuffer(),
-              let descriptor = view.currentRenderPassDescriptor,
-              let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: descriptor)
+    func draw(scene: inout GridScene, deltaTime: Float) {
+        guard
+            let commandBuffer = hardware.commandQueue.makeCommandBuffer(),
+            let descriptor = view.currentRenderPassDescriptor,
+            let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: descriptor)
         else { return }
         
-        scene.render(encoder: renderEncoder)
+        scene.render(encoder: renderEncoder, deltaTime: deltaTime)
         
         renderEncoder.endEncoding()
         guard let drawable = view.currentDrawable else {
             return
         }
         commandBuffer.present(drawable)
+        commandBuffer.commit()
+    }
+    
+    func tick(scene: inout GridScene) {
+        guard let commandBuffer = hardware.commandQueue.makeCommandBuffer(),
+              let computeEncoder = commandBuffer.makeComputeCommandEncoder() else { return }
+        scene.tick(encoder: computeEncoder)
+        computeEncoder.endEncoding()
         commandBuffer.commit()
     }
 }

@@ -12,12 +12,13 @@ enum ContentViewStyle {
 }
 
 struct ContentView: View {
-    @State var gridWidth: Int = 64
-    @State var gridHeight: Int = 64
+    @State var gridWidth: Int = 128
+    @State var gridHeight: Int = 128
     @State var fps: Int = 12
     @State var isPaused: Bool = true
-    @State var pattern: GameOfLifePattern = .pixel
+    @State var pattern: String = "Pixel"
     var tickCallbackHolder = TickCallbackHolder()
+    var modelsStorage = PatternModelsStorage.shared
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,8 +26,8 @@ struct ContentView: View {
                 ZStack {
                     MetalView(config: Config(gridSize: (gridWidth, gridHeight),
                                              fps: fps,
-                                             isPaused: isPaused,
-                                             pattern: pattern),
+                                             isPaused: isPaused),
+                              selectedPattern: pattern,
                               tickCallbackHolder: tickCallbackHolder)
                         .border(Color.black, width: MetalViewStyle.borderWidth)
                         .frame(width: MetalViewStyle.frameSize,
@@ -59,11 +60,10 @@ struct ContentView: View {
                         Divider()
                         Section(header: Text("Edit")) {
                             Picker("Brush", selection: $pattern) {
-                                Text("Pixel").tag(GameOfLifePattern.pixel)
-                                Text("Glider").tag(GameOfLifePattern.glider)
-                                Text("Pulsar").tag(GameOfLifePattern.pulsar)
-                                Text("HWSS").tag(GameOfLifePattern.hwss)
-                                Text("Glider Gun").tag(GameOfLifePattern.gliderGun)
+                                ForEach(modelsStorage.keys,
+                                        id: \.self) { patternKey in
+                                    Text(patternKey).tag(patternKey)
+                                }
                             }
                             .pickerStyle(.inline)
                         }.disabled(!isPaused)

@@ -9,8 +9,9 @@ import MetalKit
 
 protocol GridScene {
     mutating func clear()
-    mutating func tick()
-    mutating func render(encoder: MTLRenderCommandEncoder)
-    mutating func spawn(pattern: GameOfLifePattern, at location: (x: Float, y: Float))
+    mutating func tick(encoder: MTLComputeCommandEncoder)
+    mutating func render(encoder: MTLRenderCommandEncoder, deltaTime: Float)
     mutating func update(width: Int, height: Int) -> Bool
+    mutating func spawn(model: PatternModel, at location: (x: Float, y: Float))
+    mutating func drawableSizeWillChange(size: CGSize)
 }

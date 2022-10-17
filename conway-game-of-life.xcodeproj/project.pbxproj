@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E214C50228FC83A80032E1E9 /* GameOfLife.metal in Sources */ = {isa = PBXBuildFile; fileRef = E214C50128FC83A80032E1E9 /* GameOfLife.metal */; };
+		E214C50328FC83A80032E1E9 /* GameOfLife.metal in Sources */ = {isa = PBXBuildFile; fileRef = E214C50128FC83A80032E1E9 /* GameOfLife.metal */; };
+		E214C50628FC9B410032E1E9 /* PatternModelsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214C50528FC9B410032E1E9 /* PatternModelsStorage.swift */; };
+		E214C50728FC9B410032E1E9 /* PatternModelsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214C50528FC9B410032E1E9 /* PatternModelsStorage.swift */; };
+		E214C50B28FC9C8C0032E1E9 /* pixel.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C50A28FC9C8C0032E1E9 /* pixel.json */; };
+		E214C50C28FC9C8C0032E1E9 /* pixel.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C50A28FC9C8C0032E1E9 /* pixel.json */; };
+		E214C50E28FC9CE60032E1E9 /* glider.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C50D28FC9CE60032E1E9 /* glider.json */; };
+		E214C50F28FC9CE60032E1E9 /* glider.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C50D28FC9CE60032E1E9 /* glider.json */; };
+		E214C51428FCBB580032E1E9 /* gosperglidergun.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C51328FCBB580032E1E9 /* gosperglidergun.json */; };
+		E214C51528FCBB580032E1E9 /* gosperglidergun.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C51328FCBB580032E1E9 /* gosperglidergun.json */; };
+		E214C51928FCBCC00032E1E9 /* block.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C51628FCBCBF0032E1E9 /* block.json */; };
+		E214C51A28FCBCC00032E1E9 /* block.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C51628FCBCBF0032E1E9 /* block.json */; };
+		E214C51B28FCBCC00032E1E9 /* hwss.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C51728FCBCBF0032E1E9 /* hwss.json */; };
+		E214C51C28FCBCC00032E1E9 /* hwss.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C51728FCBCBF0032E1E9 /* hwss.json */; };
+		E214C51D28FCBCC00032E1E9 /* pulsar.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C51828FCBCBF0032E1E9 /* pulsar.json */; };
+		E214C51E28FCBCC00032E1E9 /* pulsar.json in Resources */ = {isa = PBXBuildFile; fileRef = E214C51828FCBCBF0032E1E9 /* pulsar.json */; };
 		E2A256E228F856F70099BCF4 /* conway_game_of_lifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A256D228F856F60099BCF4 /* conway_game_of_lifeApp.swift */; };
 		E2A256E328F856F70099BCF4 /* conway_game_of_lifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A256D228F856F60099BCF4 /* conway_game_of_lifeApp.swift */; };
 		E2A256E428F856F70099BCF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A256D328F856F60099BCF4 /* ContentView.swift */; };
@@ -41,9 +57,27 @@
 		E2A2572128F8B6560099BCF4 /* GridState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A2571F28F8B6560099BCF4 /* GridState.swift */; };
 		E2A2572728F8D8EA0099BCF4 /* MTKViewPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A2572628F8D8EA0099BCF4 /* MTKViewPlus.swift */; };
 		E2A2572828F8D8EA0099BCF4 /* MTKViewPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A2572628F8D8EA0099BCF4 /* MTKViewPlus.swift */; };
+		E2A8731728FCD20300DB74C9 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8731628FCD20300DB74C9 /* InputController.swift */; };
+		E2A8731928FCD22800DB74C9 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8731628FCD20300DB74C9 /* InputController.swift */; };
+		E2A8732B28FCDC6000DB74C9 /* RLEParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8732A28FCDC6000DB74C9 /* RLEParser.swift */; };
+		E2A8732C28FCDC6000DB74C9 /* RLEParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8732A28FCDC6000DB74C9 /* RLEParser.swift */; };
+		E2A8733228FCE57100DB74C9 /* snackeron34p14shuttle.rle in Resources */ = {isa = PBXBuildFile; fileRef = E2A8733028FCE57100DB74C9 /* snackeron34p14shuttle.rle */; };
+		E2A8733328FCE57100DB74C9 /* snackeron34p14shuttle.rle in Resources */ = {isa = PBXBuildFile; fileRef = E2A8733028FCE57100DB74C9 /* snackeron34p14shuttle.rle */; };
+		E2A8733428FCE57100DB74C9 /* period60glidergun.rle in Resources */ = {isa = PBXBuildFile; fileRef = E2A8733128FCE57100DB74C9 /* period60glidergun.rle */; };
+		E2A8733528FCE57100DB74C9 /* period60glidergun.rle in Resources */ = {isa = PBXBuildFile; fileRef = E2A8733128FCE57100DB74C9 /* period60glidergun.rle */; };
+		E2A8733728FCE86F00DB74C9 /* gosperglidergun.rle in Resources */ = {isa = PBXBuildFile; fileRef = E2A8733628FCE86F00DB74C9 /* gosperglidergun.rle */; };
+		E2A8733828FCE86F00DB74C9 /* gosperglidergun.rle in Resources */ = {isa = PBXBuildFile; fileRef = E2A8733628FCE86F00DB74C9 /* gosperglidergun.rle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E214C50128FC83A80032E1E9 /* GameOfLife.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GameOfLife.metal; sourceTree = "<group>"; };
+		E214C50528FC9B410032E1E9 /* PatternModelsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternModelsStorage.swift; sourceTree = "<group>"; };
+		E214C50A28FC9C8C0032E1E9 /* pixel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pixel.json; sourceTree = "<group>"; };
+		E214C50D28FC9CE60032E1E9 /* glider.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = glider.json; sourceTree = "<group>"; };
+		E214C51328FCBB580032E1E9 /* gosperglidergun.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gosperglidergun.json; sourceTree = "<group>"; };
+		E214C51628FCBCBF0032E1E9 /* block.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = block.json; sourceTree = "<group>"; };
+		E214C51728FCBCBF0032E1E9 /* hwss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hwss.json; sourceTree = "<group>"; };
+		E214C51828FCBCBF0032E1E9 /* pulsar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pulsar.json; sourceTree = "<group>"; };
 		E2A256D228F856F60099BCF4 /* conway_game_of_lifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conway_game_of_lifeApp.swift; sourceTree = "<group>"; };
 		E2A256D328F856F60099BCF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2A256D428F856F70099BCF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +99,11 @@
 		E2A2571B28F8B1440099BCF4 /* Foreground.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Foreground.metal; sourceTree = "<group>"; };
 		E2A2571F28F8B6560099BCF4 /* GridState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridState.swift; sourceTree = "<group>"; };
 		E2A2572628F8D8EA0099BCF4 /* MTKViewPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKViewPlus.swift; sourceTree = "<group>"; };
+		E2A8731628FCD20300DB74C9 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
+		E2A8732A28FCDC6000DB74C9 /* RLEParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLEParser.swift; sourceTree = "<group>"; };
+		E2A8733028FCE57100DB74C9 /* snackeron34p14shuttle.rle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snackeron34p14shuttle.rle; sourceTree = "<group>"; };
+		E2A8733128FCE57100DB74C9 /* period60glidergun.rle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = period60glidergun.rle; sourceTree = "<group>"; };
+		E2A8733628FCE86F00DB74C9 /* gosperglidergun.rle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gosperglidergun.rle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +124,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E214C50828FC9C670032E1E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E214C50928FC9C6E0032E1E9 /* Patterns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E214C50928FC9C6E0032E1E9 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				E2A8733628FCE86F00DB74C9 /* gosperglidergun.rle */,
+				E2A8733128FCE57100DB74C9 /* period60glidergun.rle */,
+				E2A8733028FCE57100DB74C9 /* snackeron34p14shuttle.rle */,
+				E214C51628FCBCBF0032E1E9 /* block.json */,
+				E214C51728FCBCBF0032E1E9 /* hwss.json */,
+				E214C51828FCBCBF0032E1E9 /* pulsar.json */,
+				E214C51328FCBB580032E1E9 /* gosperglidergun.json */,
+				E214C50A28FC9C8C0032E1E9 /* pixel.json */,
+				E214C50D28FC9CE60032E1E9 /* glider.json */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
 		E2A256CC28F856F60099BCF4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +160,7 @@
 		E2A256D128F856F60099BCF4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E2A8731328FCD1DE00DB74C9 /* Input */,
 				E2A256D228F856F60099BCF4 /* conway_game_of_lifeApp.swift */,
 				E2A256FB28F85DC40099BCF4 /* Grid */,
 				E2A2571128F8A8750099BCF4 /* Model */,
@@ -104,6 +168,7 @@
 				E2A256F428F85A400099BCF4 /* Renderer */,
 				E2A256FF28F863EE0099BCF4 /* Shader */,
 				E2A256F028F857100099BCF4 /* SwiftUI */,
+				E214C50828FC9C670032E1E9 /* Resources */,
 				E2A256D428F856F70099BCF4 /* Assets.xcassets */,
 				E2A2570728F869C50099BCF4 /* Common.h */,
 			);
@@ -161,6 +226,7 @@
 			children = (
 				E2A2570028F863FD0099BCF4 /* Grid.metal */,
 				E2A2571B28F8B1440099BCF4 /* Foreground.metal */,
+				E214C50128FC83A80032E1E9 /* GameOfLife.metal */,
 			);
 			path = Shader;
 			sourceTree = "<group>";
@@ -179,6 +245,8 @@
 				E2A2571528F8AC780099BCF4 /* ForegroundPrimitive.swift */,
 				E2A256FC28F85DCC0099BCF4 /* GridPrimitive.swift */,
 				E2A2571228F8A8CB0099BCF4 /* Primitive.swift */,
+				E214C50528FC9B410032E1E9 /* PatternModelsStorage.swift */,
+				E2A8732A28FCDC6000DB74C9 /* RLEParser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +258,14 @@
 				E2A2571F28F8B6560099BCF4 /* GridState.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		E2A8731328FCD1DE00DB74C9 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				E2A8731628FCD20300DB74C9 /* InputController.swift */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +347,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A8733228FCE57100DB74C9 /* snackeron34p14shuttle.rle in Resources */,
+				E214C50E28FC9CE60032E1E9 /* glider.json in Resources */,
+				E214C51428FCBB580032E1E9 /* gosperglidergun.json in Resources */,
+				E214C51D28FCBCC00032E1E9 /* pulsar.json in Resources */,
 				E2A256E628F856F70099BCF4 /* Assets.xcassets in Resources */,
+				E214C50B28FC9C8C0032E1E9 /* pixel.json in Resources */,
+				E214C51B28FCBCC00032E1E9 /* hwss.json in Resources */,
+				E214C51928FCBCC00032E1E9 /* block.json in Resources */,
+				E2A8733428FCE57100DB74C9 /* period60glidergun.rle in Resources */,
+				E2A8733728FCE86F00DB74C9 /* gosperglidergun.rle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +364,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A8733328FCE57100DB74C9 /* snackeron34p14shuttle.rle in Resources */,
+				E214C50F28FC9CE60032E1E9 /* glider.json in Resources */,
+				E214C51528FCBB580032E1E9 /* gosperglidergun.json in Resources */,
+				E214C51E28FCBCC00032E1E9 /* pulsar.json in Resources */,
 				E2A256E728F856F70099BCF4 /* Assets.xcassets in Resources */,
+				E214C50C28FC9C8C0032E1E9 /* pixel.json in Resources */,
+				E214C51C28FCBCC00032E1E9 /* hwss.json in Resources */,
+				E214C51A28FCBCC00032E1E9 /* block.json in Resources */,
+				E2A8733528FCE57100DB74C9 /* period60glidergun.rle in Resources */,
+				E2A8733828FCE86F00DB74C9 /* gosperglidergun.rle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +388,16 @@
 				E2A2571928F8AE750099BCF4 /* GridController.swift in Sources */,
 				E2A256F228F8571E0099BCF4 /* MetalView.swift in Sources */,
 				E2A256F928F85A5D0099BCF4 /* Hardware.swift in Sources */,
+				E214C50228FC83A80032E1E9 /* GameOfLife.metal in Sources */,
 				E2A2571328F8A8CB0099BCF4 /* Primitive.swift in Sources */,
+				E2A8732B28FCDC6000DB74C9 /* RLEParser.swift in Sources */,
 				E2A2570C28F8A73F0099BCF4 /* GridScene.swift in Sources */,
 				E2A256E428F856F70099BCF4 /* ContentView.swift in Sources */,
+				E2A8731728FCD20300DB74C9 /* InputController.swift in Sources */,
 				E2A2572728F8D8EA0099BCF4 /* MTKViewPlus.swift in Sources */,
 				E2A2570528F865A90099BCF4 /* MTLVertexDescriptor+Extensions.swift in Sources */,
 				E2A2571C28F8B1440099BCF4 /* Foreground.metal in Sources */,
+				E214C50628FC9B410032E1E9 /* PatternModelsStorage.swift in Sources */,
 				E2A256E228F856F70099BCF4 /* conway_game_of_lifeApp.swift in Sources */,
 				E2A2570F28F8A77E0099BCF4 /* GameOfLifeScene.swift in Sources */,
 				E2A2572028F8B6560099BCF4 /* GridState.swift in Sources */,
@@ -317,12 +415,16 @@
 				E2A2571A28F8AE750099BCF4 /* GridController.swift in Sources */,
 				E2A256F328F8571E0099BCF4 /* MetalView.swift in Sources */,
 				E2A256FA28F85A5D0099BCF4 /* Hardware.swift in Sources */,
+				E214C50328FC83A80032E1E9 /* GameOfLife.metal in Sources */,
 				E2A2571428F8A8CB0099BCF4 /* Primitive.swift in Sources */,
+				E2A8732C28FCDC6000DB74C9 /* RLEParser.swift in Sources */,
 				E2A2570D28F8A73F0099BCF4 /* GridScene.swift in Sources */,
 				E2A256E528F856F70099BCF4 /* ContentView.swift in Sources */,
+				E2A8731928FCD22800DB74C9 /* InputController.swift in Sources */,
 				E2A2572828F8D8EA0099BCF4 /* MTKViewPlus.swift in Sources */,
 				E2A2570628F865A90099BCF4 /* MTLVertexDescriptor+Extensions.swift in Sources */,
 				E2A2571D28F8B1440099BCF4 /* Foreground.metal in Sources */,
+				E214C50728FC9B410032E1E9 /* PatternModelsStorage.swift in Sources */,
 				E2A256E328F856F70099BCF4 /* conway_game_of_lifeApp.swift in Sources */,
 				E2A2571028F8A77E0099BCF4 /* GameOfLifeScene.swift in Sources */,
 				E2A2572128F8B6560099BCF4 /* GridState.swift in Sources */,
